@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-base-url="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 — 財產申報開放觀測站</title>
+    <meta name="description" content="查閱 3,889 位台灣公職人員的 18,227 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
+        <link rel="canonical" href="/">
+        <meta property="og:title" content="首頁 — 財產申報開放觀測站">
+    <meta property="og:description" content="查閱 3,889 位台灣公職人員的 18,227 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
+    <meta property="og:type" content="website">
+        <meta property="og:url" content="/">
+        <meta property="og:site_name" content="財產申報開放觀測站">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="首頁 — 財產申報開放觀測站">
+    <meta name="twitter:description" content="查閱 3,889 位台灣公職人員的 18,227 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/search.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
+    </head>
+<body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+    <nav class="glass sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-lg font-bold text-gray-900">
+                <span class="text-2xl">&#127981;</span>
+                <span>財產申報開放觀測站</span>
+            </a>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="/" class="text-gray-600 hover:text-brand-600 transition">首頁</a>
+                <a href="/persons/" class="text-gray-600 hover:text-brand-600 transition">申報人</a>
+                <a href="/issues/" class="text-gray-600 hover:text-brand-600 transition">公報期別</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1">
+        <section class="hero-gradient text-white py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+            他們擁有什麼？
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+            3,889 位公職人員、18,227 筆財產申報，一目瞭然
+        </p>
+
+        <div class="mt-8 max-w-lg mx-auto" x-data="personSearch()" x-cloak>
+            <div class="relative">
+                <input
+                    type="text"
+                    x-model="query"
+                    @input.debounce.200ms="search()"
+                    @keydown.escape="results = []"
+                    placeholder="搜尋申報人姓名..."
+                    class="w-full px-5 py-3 rounded-xl text-gray-800 bg-white shadow-lg text-lg focus:outline-none focus:ring-2 focus:ring-brand-400"
+                >
+                <div class="absolute right-3 top-3 text-gray-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+            </div>
+            <div x-show="results.length > 0" class="absolute mt-1 w-full max-w-lg bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 max-h-80 overflow-y-auto">
+                <template x-for="r in results" :key="r.id">
+                    <a :href="'/persons/' + r.id + '.html'" class="block px-4 py-3 hover:bg-brand-50 border-b border-gray-50 transition">
+                        <span class="font-medium text-gray-800" x-text="r.name"></span>
+                        <span class="text-sm text-gray-500 ml-2" x-text="r.agency"></span>
+                    </a>
+                </template>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 -mt-8 relative z-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="/persons/" class="bg-white rounded-xl shadow-md p-5 card-hover fade-in block">
+                    <div class="text-2xl mb-1">&#128100;</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">3,889</div>
+            <div class="text-sm text-gray-500 mt-1">申報人</div>
+                </a>
+                                <div class="bg-white rounded-xl shadow-md p-5 card-hover fade-in">
+                    <div class="text-2xl mb-1">&#128196;</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">18,227</div>
+            <div class="text-sm text-gray-500 mt-1">申報筆數</div>
+                </div>
+                                <a href="/issues/" class="bg-white rounded-xl shadow-md p-5 card-hover fade-in block">
+                    <div class="text-2xl mb-1">&#128240;</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">235</div>
+            <div class="text-sm text-gray-500 mt-1">公報期數</div>
+                </a>
+                                <div class="bg-white rounded-xl shadow-md p-5 card-hover fade-in">
+                    <div class="text-2xl mb-1">&#127758;</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">78,156,480</div>
+            <div class="text-sm text-gray-500 mt-1">土地面積(㎡)</div>
+                </div>
+                    </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="px-6 py-4 bg-gradient-to-r from-teal-600 to-teal-500 text-white">
+                <h2 class="text-lg font-bold">&#127942; 土地持有排行</h2>
+                <p class="text-sm text-white/70">依所有申報紀錄中的土地面積加總排名</p>
+            </div>
+            <div class="divide-y divide-gray-100">
+                                <a href="/persons/1.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">1</span>
+                    <div class="flex-1">
+                        <span class="font-medium">王金平</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">9,963,761 ㎡</span>
+                </a>
+                                <a href="/persons/103.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">2</span>
+                    <div class="flex-1">
+                        <span class="font-medium">簡東明</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">3,557,836 ㎡</span>
+                </a>
+                                <a href="/persons/3016.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">3</span>
+                    <div class="flex-1">
+                        <span class="font-medium">何木炎</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">2,983,758 ㎡</span>
+                </a>
+                                <a href="/persons/91.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">4</span>
+                    <div class="flex-1">
+                        <span class="font-medium">馬文君</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,825,826 ㎡</span>
+                </a>
+                                <a href="/persons/488.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">5</span>
+                    <div class="flex-1">
+                        <span class="font-medium">孔文吉</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,590,287 ㎡</span>
+                </a>
+                                <a href="/persons/2517.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">6</span>
+                    <div class="flex-1">
+                        <span class="font-medium">陳泱瑚</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,333,756 ㎡</span>
+                </a>
+                                <a href="/persons/1452.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">7</span>
+                    <div class="flex-1">
+                        <span class="font-medium">陳鴻源</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,312,801 ㎡</span>
+                </a>
+                                <a href="/persons/2480.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">8</span>
+                    <div class="flex-1">
+                        <span class="font-medium">章正輝</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,150,714 ㎡</span>
+                </a>
+                                <a href="/persons/705.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">9</span>
+                    <div class="flex-1">
+                        <span class="font-medium">伍麗華</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,116,724 ㎡</span>
+                </a>
+                                <a href="/persons/1291.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">10</span>
+                    <div class="flex-1">
+                        <span class="font-medium">孫大成</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,060,252 ㎡</span>
+                </a>
+                            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+            <div class="px-6 py-4 bg-gradient-to-r from-brand-600 to-brand-500 text-white">
+                <h2 class="text-lg font-bold">&#128176; 財產總額排行</h2>
+                <p class="text-sm text-white/70">依最近一次申報的財產總額排名</p>
+            </div>
+            <div class="divide-y divide-gray-100">
+                                <a href="/persons/3872.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">1</span>
+                    <div class="flex-1">
+                        <span class="font-medium">鄭聚然</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 16,672,834,304</span>
+                </a>
+                                <a href="/persons/2812.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">2</span>
+                    <div class="flex-1">
+                        <span class="font-medium">李姸慧</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 6,505,878,311</span>
+                </a>
+                                <a href="/persons/2112.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">3</span>
+                    <div class="flex-1">
+                        <span class="font-medium">何勝豐</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 5,704,300,000</span>
+                </a>
+                                <a href="/persons/745.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">4</span>
+                    <div class="flex-1">
+                        <span class="font-medium">蕭景田</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 1,616,266,249</span>
+                </a>
+                                <a href="/persons/33.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">5</span>
+                    <div class="flex-1">
+                        <span class="font-medium">鄭麗君</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 1,181,230,000</span>
+                </a>
+                                <a href="/persons/465.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">6</span>
+                    <div class="flex-1">
+                        <span class="font-medium">鄭寶清</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 963,870,858</span>
+                </a>
+                                <a href="/persons/386.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">7</span>
+                    <div class="flex-1">
+                        <span class="font-medium">顏寬恒</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 654,415,654</span>
+                </a>
+                                <a href="/persons/3635.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">8</span>
+                    <div class="flex-1">
+                        <span class="font-medium">張育美</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 632,038,775</span>
+                </a>
+                                <a href="/persons/3544.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">9</span>
+                    <div class="flex-1">
+                        <span class="font-medium">黃文彬</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 579,867,190</span>
+                </a>
+                                <a href="/persons/2805.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">10</span>
+                    <div class="flex-1">
+                        <span class="font-medium">陳菁徽</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 562,327,754</span>
+                </a>
+                            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+            <p>資料來源：<a href="https://sunshine.cy.gov.tw/News.aspx?n=17&sms=8861" target="_blank" rel="noopener" class="text-brand-600 hover:underline">監察院陽光法令主題網</a></p>
+            <p class="mt-1">本站為開放資料再利用，不代表任何官方立場</p>
+            <p class="mt-1">製作：<a href="https://facebook.com/k.olc.tw" target="_blank" rel="noopener" class="text-brand-600 hover:underline">江明宗</a></p>
+        </div>
+    </footer>
+
+    </body>
+</html>

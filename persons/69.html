@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-base-url="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李大維 — 財產申報 — 財產申報開放觀測站</title>
+    <meta name="description" content="李大維（外交部 大使）的財產申報紀錄，共 17 次申報">
+        <link rel="canonical" href="/persons/69.html">
+        <meta property="og:title" content="李大維 — 財產申報 — 財產申報開放觀測站">
+    <meta property="og:description" content="李大維（外交部 大使）的財產申報紀錄，共 17 次申報">
+    <meta property="og:type" content="profile">
+        <meta property="og:url" content="/persons/69.html">
+        <meta property="og:site_name" content="財產申報開放觀測站">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="李大維 — 財產申報 — 財產申報開放觀測站">
+    <meta name="twitter:description" content="李大維（外交部 大使）的財產申報紀錄，共 17 次申報">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/search.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+    <nav class="glass sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-lg font-bold text-gray-900">
+                <span class="text-2xl">&#127981;</span>
+                <span>財產申報開放觀測站</span>
+            </a>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="/" class="text-gray-600 hover:text-brand-600 transition">首頁</a>
+                <a href="/persons/" class="text-gray-600 hover:text-brand-600 transition">申報人</a>
+                <a href="/issues/" class="text-gray-600 hover:text-brand-600 transition">公報期別</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="mb-2">
+        <a href="/" class="text-sm text-gray-500 hover:text-brand-600 transition">&larr; 回首頁</a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md overflow-hidden fade-in">
+        <div class="hero-gradient px-6 py-8 text-white">
+            <h1 class="text-3xl font-extrabold">李大維</h1>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    外交部 — 大使
+                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    外交部 — 部長
+                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    外交部駐加拿大代表處 — 代表
+                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    外交部 — 代表
+                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    北美事務協調委員會 — 主任委員
+                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    國家安全會議 — 秘書長
+                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20">
+                    總統府 — 秘書長
+                </span>
+                            </div>
+                    </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 border-b border-gray-100">
+            <div>
+                <div class="text-sm text-gray-500">申報次數</div>
+                <div class="text-2xl font-bold stat-number">17</div>
+            </div>
+            <div>
+                <div class="text-sm text-gray-500">最新財產總額</div>
+                <div class="text-2xl font-bold stat-number">NT$ 68,040,653</div>
+            </div>
+            <div>
+                <div class="text-sm text-gray-500">首次公報</div>
+                <div class="text-lg font-semibold">2010-06-02</div>
+            </div>
+            <div>
+                <div class="text-sm text-gray-500">最近公報</div>
+                <div class="text-lg font-semibold">2021-03-05</div>
+            </div>
+        </div>
+    </div>
+
+        <div class="mt-8 bg-white rounded-xl shadow-md p-6 fade-in">
+        <h2 class="text-lg font-bold text-gray-900 mb-4">&#128176; 財產總額趨勢</h2>
+        <canvas id="assetsChart" height="100"></canvas>
+    </div>
+    
+        <div class="mt-8 bg-white rounded-xl shadow-md p-6 fade-in">
+        <h2 class="text-lg font-bold text-gray-900 mb-4">&#128200; 土地面積趨勢</h2>
+        <canvas id="landChart" height="100"></canvas>
+    </div>
+    
+    <div class="mt-8 fade-in">
+        <h2 class="text-lg font-bold text-gray-900 mb-4">&#128196; 申報歷程</h2>
+        <div class="space-y-3">
+                        <a href="/declarations/14480.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 171 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2021-03-05</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">總統府 秘書長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 68,040,653</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">就(到)職申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/13057.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 143 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2019-03-29</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">國家安全會議 秘書長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 69,742,141</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/12671.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 137 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2018-08-01</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">國家安全會議 秘書長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 10</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">新增信託財產申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/11829.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 127 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2018-02-14</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 部長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 73,307,508</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/11249.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 117 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2017-03-03</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 部長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 84,560,694</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/1100.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 115 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2017-01-24</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 部長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/996.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 113 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2016-11-09</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 部長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">新增信託財產申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/807.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 110 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2016-08-12</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 部長</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/113.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 101 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2016-03-22</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 大使</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 89,546,725</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/10420.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 83 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2015-04-17</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">北美事務協調委員會 主任委員</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">新增信託財產申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/10009.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 77 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2015-02-13</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">北美事務協調委員會 主任委員</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 85,257,226</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/9260.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 64 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2014-06-13</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">北美事務協調委員會 主任委員</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 68,016,865</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/8825.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 58 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2013-09-27</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">北美事務協調委員會 主任委員</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 10</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/8301.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 50 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2013-03-22</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">北美事務協調委員會 主任委員</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 72,160,547</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/7215.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 36 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2012-05-03</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部 代表</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 62,322,188</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/2338.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 20 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2011-04-07</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部駐加拿大代表處 代表</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 75,708,253</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                        <a href="/declarations/6066.html" class="block bg-white rounded-xl shadow-sm p-4 card-hover border border-gray-100 hover:border-brand-300 transition">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-medium text-gray-900">第 2 期</span>
+                        <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-gray-600">2010-06-02</span>
+                                                <span class="text-gray-500 mx-2">|</span>
+                        <span class="text-sm text-gray-500">外交部駐加拿大代表處 代表</span>
+                                            </div>
+                    <div class="flex items-center gap-4">
+                                                <span class="text-sm text-gray-500 stat-number">NT$ 65,614,054</span>
+                                                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">定期申報</span>
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+                    </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+            <p>資料來源：<a href="https://sunshine.cy.gov.tw/News.aspx?n=17&sms=8861" target="_blank" rel="noopener" class="text-brand-600 hover:underline">監察院陽光法令主題網</a></p>
+            <p class="mt-1">本站為開放資料再利用，不代表任何官方立場</p>
+            <p class="mt-1">製作：<a href="https://facebook.com/k.olc.tw" target="_blank" rel="noopener" class="text-brand-600 hover:underline">江明宗</a></p>
+        </div>
+    </footer>
+
+    <script>
+new Chart(document.getElementById('assetsChart'), {
+    type: 'line',
+    data: {
+        labels: ["2010-06-02","2011-04-07","2012-05-03","2013-03-22","2013-09-27","2014-06-13","2015-02-13","2015-04-17","2016-03-22","2016-08-12","2016-11-09","2017-01-24","2017-03-03","2018-02-14","2018-08-01","2019-03-29","2021-03-05"],
+        datasets: [{
+            label: '財產總額 (NT$)',
+            data: [65614054,75708253,62322188,72160547,10,68016865,85257226,0,89546725,0,0,0,84560694,73307508,10,69742141,68040653],
+            borderColor: '#ea580c',
+            backgroundColor: 'rgba(234,88,12,0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 4,
+            pointBackgroundColor: '#ea580c',
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, ticks: { callback: function(v) { return 'NT$ ' + v.toLocaleString(); } } },
+            x: { ticks: { maxRotation: 45 } }
+        }
+    }
+});
+new Chart(document.getElementById('landChart'), {
+    type: 'line',
+    data: {
+        labels: ["2010-06-02","2011-04-07","2012-05-03","2013-03-22","2013-09-27","2014-06-13","2015-02-13","2015-04-17","2016-03-22","2016-08-12","2016-11-09","2017-01-24","2017-03-03","2018-02-14","2018-08-01","2019-03-29","2021-03-05"],
+        datasets: [{
+            label: '土地面積 (㎡)',
+            data: [0,225.35,0,225.35,0,0,0,34.86,225.35,34.86,34.86,0,225.35,487.75,0,487.75,487.75],
+            borderColor: '#0d9488',
+            backgroundColor: 'rgba(13,148,136,0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 4,
+            pointBackgroundColor: '#0d9488',
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, ticks: { callback: function(v) { return v.toLocaleString() + ' ㎡'; } } },
+            x: { ticks: { maxRotation: 45 } }
+        }
+    }
+});
+</script>
+</body>
+</html>
