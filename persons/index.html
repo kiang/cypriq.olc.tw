@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-base-url="">
+<html lang="zh-TW" data-base-url="https://cypriq.olc.tw">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ1JR851SJ"></script>
     <script>
@@ -12,31 +12,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>申報人列表 — 財產申報開放觀測站</title>
     <meta name="description" content="瀏覽全部 3,889 位公職人員的財產申報紀錄，可依姓名篩選查詢">
-        <link rel="canonical" href="/persons/">
+        <link rel="canonical" href="https://cypriq.olc.tw/persons/">
         <meta property="og:title" content="申報人列表 — 財產申報開放觀測站">
     <meta property="og:description" content="瀏覽全部 3,889 位公職人員的財產申報紀錄，可依姓名篩選查詢">
     <meta property="og:type" content="website">
-        <meta property="og:url" content="/persons/">
+        <meta property="og:url" content="https://cypriq.olc.tw/persons/">
         <meta property="og:site_name" content="財產申報開放觀測站">
     <meta property="og:locale" content="zh_TW">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="申報人列表 — 財產申報開放觀測站">
     <meta name="twitter:description" content="瀏覽全部 3,889 位公職人員的財產申報紀錄，可依姓名篩選查詢">
-    <link rel="stylesheet" href="/assets/style.css">
-    <script src="/assets/search.js"></script>
+    <link rel="stylesheet" href="https://cypriq.olc.tw/assets/style.css">
+    <script src="https://cypriq.olc.tw/assets/search.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
     </head>
 <body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
     <nav class="glass sticky top-0 z-50 border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2 text-lg font-bold text-gray-900">
+            <a href="https://cypriq.olc.tw/" class="flex items-center gap-2 text-lg font-bold text-gray-900">
                 <span class="text-2xl">&#127981;</span>
                 <span>財產申報開放觀測站</span>
             </a>
             <div class="flex items-center gap-4 text-sm">
-                <a href="/" class="text-gray-600 hover:text-brand-600 transition">首頁</a>
-                <a href="/persons/" class="text-gray-600 hover:text-brand-600 transition">申報人</a>
-                <a href="/issues/" class="text-gray-600 hover:text-brand-600 transition">公報期別</a>
+                <a href="https://cypriq.olc.tw/" class="text-gray-600 hover:text-brand-600 transition">首頁</a>
+                <a href="https://cypriq.olc.tw/persons/" class="text-gray-600 hover:text-brand-600 transition">申報人</a>
+                <a href="https://cypriq.olc.tw/issues/" class="text-gray-600 hover:text-brand-600 transition">公報期別</a>
             </div>
         </div>
     </nav>
@@ -55,7 +55,7 @@
         <div class="mt-4 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             <template x-for="p in filtered" :key="p.id">
                 <a
-                    :href="'/persons/' + p.id + '.html'"
+                    :href="'https://cypriq.olc.tw/persons/' + p.id + '.html'"
                     class="block bg-white rounded-lg shadow-sm border border-gray-100 p-3 card-hover hover:border-brand-300 transition"
                 >
                     <div class="font-medium text-gray-900" x-text="p.name"></div>
