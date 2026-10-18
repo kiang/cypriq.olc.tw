@@ -6,8 +6,7 @@ function personSearch() {
         async search() {
             if (this.query.length < 1) { this.results = []; return; }
             if (!window.searchIndex) {
-                var base = document.documentElement.dataset.baseUrl || '';
-                var res = await fetch(base + '/search-index.json');
+                var res = await fetch('/search-index.json');
                 window.searchIndex = await res.json();
             }
             var q = this.query.toLowerCase();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-base-url="https://cypriq.olc.tw">
+<html lang="zh-TW">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ1JR851SJ"></script>
     <script>
@@ -11,32 +11,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁 — 財產申報開放觀測站</title>
-    <meta name="description" content="查閱 3,889 位台灣公職人員的 18,227 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
+    <meta name="description" content="查閱 3,943 位台灣公職人員的 19,361 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
         <link rel="canonical" href="https://cypriq.olc.tw/">
         <meta property="og:title" content="首頁 — 財產申報開放觀測站">
-    <meta property="og:description" content="查閱 3,889 位台灣公職人員的 18,227 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
+    <meta property="og:description" content="查閱 3,943 位台灣公職人員的 19,361 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
     <meta property="og:type" content="website">
         <meta property="og:url" content="https://cypriq.olc.tw/">
         <meta property="og:site_name" content="財產申報開放觀測站">
     <meta property="og:locale" content="zh_TW">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="首頁 — 財產申報開放觀測站">
-    <meta name="twitter:description" content="查閱 3,889 位台灣公職人員的 18,227 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
-    <link rel="stylesheet" href="https://cypriq.olc.tw/assets/style.css">
-    <script src="https://cypriq.olc.tw/assets/search.js"></script>
+    <meta name="twitter:description" content="查閱 3,943 位台灣公職人員的 19,361 筆財產申報資料，包含土地、建物、存款、股票等財產明細">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/search.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
     </head>
 <body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
     <nav class="glass sticky top-0 z-50 border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="https://cypriq.olc.tw/" class="flex items-center gap-2 text-lg font-bold text-gray-900">
+            <a href="/" class="flex items-center gap-2 text-lg font-bold text-gray-900">
                 <span class="text-2xl">&#127981;</span>
                 <span>財產申報開放觀測站</span>
             </a>
             <div class="flex items-center gap-4 text-sm">
-                <a href="https://cypriq.olc.tw/" class="text-gray-600 hover:text-brand-600 transition">首頁</a>
-                <a href="https://cypriq.olc.tw/persons/" class="text-gray-600 hover:text-brand-600 transition">申報人</a>
-                <a href="https://cypriq.olc.tw/issues/" class="text-gray-600 hover:text-brand-600 transition">公報期別</a>
+                <a href="/" class="text-gray-600 hover:text-brand-600 transition">首頁</a>
+                <a href="/persons/" class="text-gray-600 hover:text-brand-600 transition">申報人</a>
+                <a href="/issues/" class="text-gray-600 hover:text-brand-600 transition">公報期別</a>
             </div>
         </div>
     </nav>
@@ -48,7 +48,7 @@
             他們擁有什麼？
         </h1>
         <p class="mt-4 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            3,889 位公職人員、18,227 筆財產申報，一目瞭然
+            3,943 位公職人員、19,361 筆財產申報，一目瞭然
         </p>
 
         <div class="mt-8 max-w-lg mx-auto" x-data="personSearch()" x-cloak>
@@ -67,7 +67,7 @@
             </div>
             <div x-show="results.length > 0" class="absolute mt-1 w-full max-w-lg bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 max-h-80 overflow-y-auto">
                 <template x-for="r in results" :key="r.id">
-                    <a :href="'https://cypriq.olc.tw/persons/' + r.id + '.html'" class="block px-4 py-3 hover:bg-brand-50 border-b border-gray-50 transition">
+                    <a :href="'/persons/' + r.id + '.html'" class="block px-4 py-3 hover:bg-brand-50 border-b border-gray-50 transition">
                         <span class="font-medium text-gray-800" x-text="r.name"></span>
                         <span class="text-sm text-gray-500 ml-2" x-text="r.agency"></span>
                     </a>
@@ -79,24 +79,24 @@
 
 <section class="max-w-6xl mx-auto px-4 -mt-8 relative z-10">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <a href="https://cypriq.olc.tw/persons/" class="bg-white rounded-xl shadow-md p-5 card-hover fade-in block">
+                        <a href="/persons/" class="bg-white rounded-xl shadow-md p-5 card-hover fade-in block">
                     <div class="text-2xl mb-1">&#128100;</div>
-            <div class="text-2xl font-bold stat-number text-gray-900">3,889</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">3,943</div>
             <div class="text-sm text-gray-500 mt-1">申報人</div>
                 </a>
                                 <div class="bg-white rounded-xl shadow-md p-5 card-hover fade-in">
                     <div class="text-2xl mb-1">&#128196;</div>
-            <div class="text-2xl font-bold stat-number text-gray-900">18,227</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">19,361</div>
             <div class="text-sm text-gray-500 mt-1">申報筆數</div>
                 </div>
-                                <a href="https://cypriq.olc.tw/issues/" class="bg-white rounded-xl shadow-md p-5 card-hover fade-in block">
+                                <a href="/issues/" class="bg-white rounded-xl shadow-md p-5 card-hover fade-in block">
                     <div class="text-2xl mb-1">&#128240;</div>
-            <div class="text-2xl font-bold stat-number text-gray-900">235</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">250</div>
             <div class="text-sm text-gray-500 mt-1">公報期數</div>
                 </a>
                                 <div class="bg-white rounded-xl shadow-md p-5 card-hover fade-in">
                     <div class="text-2xl mb-1">&#127758;</div>
-            <div class="text-2xl font-bold stat-number text-gray-900">78,156,480</div>
+            <div class="text-2xl font-bold stat-number text-gray-900">85,897,037</div>
             <div class="text-sm text-gray-500 mt-1">土地面積(㎡)</div>
                 </div>
                     </div>
@@ -110,75 +110,75 @@
                 <p class="text-sm text-white/70">依所有申報紀錄中的土地面積加總排名</p>
             </div>
             <div class="divide-y divide-gray-100">
-                                <a href="https://cypriq.olc.tw/persons/1.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                                <a href="/persons/1.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
                     <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">1</span>
                     <div class="flex-1">
                         <span class="font-medium">王金平</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">9,963,761 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/103.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                                <a href="/persons/103.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
                     <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">2</span>
                     <div class="flex-1">
                         <span class="font-medium">簡東明</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">3,557,836 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/3016.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                                <a href="/persons/3016.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
                     <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">3</span>
                     <div class="flex-1">
                         <span class="font-medium">何木炎</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">2,983,758 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/91.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                                <a href="/persons/91.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
                     <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">4</span>
                     <div class="flex-1">
                         <span class="font-medium">馬文君</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">1,825,826 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/488.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                                <a href="/persons/488.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
                     <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">5</span>
                     <div class="flex-1">
                         <span class="font-medium">孔文吉</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">1,590,287 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/2517.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                                <a href="/persons/2480.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
                     <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">6</span>
+                    <div class="flex-1">
+                        <span class="font-medium">章正輝</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,534,286 ㎡</span>
+                </a>
+                                <a href="/persons/2517.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">7</span>
                     <div class="flex-1">
                         <span class="font-medium">陳泱瑚</span>
                     </div>
-                    <span class="text-sm text-gray-500 stat-number">1,333,756 ㎡</span>
+                    <span class="text-sm text-gray-500 stat-number">1,338,604 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/1452.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">7</span>
+                                <a href="/persons/2485.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">8</span>
+                    <div class="flex-1">
+                        <span class="font-medium">楊清順</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">1,329,706 ㎡</span>
+                </a>
+                                <a href="/persons/1452.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">9</span>
                     <div class="flex-1">
                         <span class="font-medium">陳鴻源</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">1,312,801 ㎡</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/2480.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">8</span>
-                    <div class="flex-1">
-                        <span class="font-medium">章正輝</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">1,150,714 ㎡</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/705.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">9</span>
+                                <a href="/persons/705.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">10</span>
                     <div class="flex-1">
                         <span class="font-medium">伍麗華</span>
                     </div>
                     <span class="text-sm text-gray-500 stat-number">1,116,724 ㎡</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/1291.html" class="flex items-center px-6 py-3 hover:bg-teal-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm mr-3">10</span>
-                    <div class="flex-1">
-                        <span class="font-medium">孫大成</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">1,060,252 ㎡</span>
                 </a>
                             </div>
         </div>
@@ -189,75 +189,75 @@
                 <p class="text-sm text-white/70">依最近一次申報的財產總額排名</p>
             </div>
             <div class="divide-y divide-gray-100">
-                                <a href="https://cypriq.olc.tw/persons/3872.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                                <a href="/persons/3910.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
                     <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">1</span>
                     <div class="flex-1">
-                        <span class="font-medium">鄭聚然</span>
+                        <span class="font-medium">宋承恩</span>
                     </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 16,672,834,304</span>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 2,740,307,813</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/1452.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                                <a href="/persons/745.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
                     <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">2</span>
-                    <div class="flex-1">
-                        <span class="font-medium">陳鴻源</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 7,388,489,248</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/2112.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">3</span>
-                    <div class="flex-1">
-                        <span class="font-medium">何勝豐</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 6,839,144,004</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/2812.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">4</span>
-                    <div class="flex-1">
-                        <span class="font-medium">李姸慧</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 6,505,878,311</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/1548.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">5</span>
-                    <div class="flex-1">
-                        <span class="font-medium">陳錦錠</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 6,041,778,405</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/1661.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">6</span>
-                    <div class="flex-1">
-                        <span class="font-medium">張清照</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 1,953,544,713</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/745.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">7</span>
                     <div class="flex-1">
                         <span class="font-medium">蕭景田</span>
                     </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 1,616,266,249</span>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 1,589,866,249</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/1930.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">8</span>
-                    <div class="flex-1">
-                        <span class="font-medium">曾麗燕</span>
-                    </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 1,542,422,234</span>
-                </a>
-                                <a href="https://cypriq.olc.tw/persons/102.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
-                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">9</span>
+                                <a href="/persons/102.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">3</span>
                     <div class="flex-1">
                         <span class="font-medium">薛凌</span>
                     </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 1,458,121,729</span>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 990,121,729</span>
                 </a>
-                                <a href="https://cypriq.olc.tw/persons/33.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                                <a href="/persons/1548.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">4</span>
+                    <div class="flex-1">
+                        <span class="font-medium">陳錦錠</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 812,858,563</span>
+                </a>
+                                <a href="/persons/14.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">5</span>
+                    <div class="flex-1">
+                        <span class="font-medium">張慶忠</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 590,820,453</span>
+                </a>
+                                <a href="/persons/45.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">6</span>
+                    <div class="flex-1">
+                        <span class="font-medium">蘇清泉</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 500,490,803</span>
+                </a>
+                                <a href="/persons/3544.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">7</span>
+                    <div class="flex-1">
+                        <span class="font-medium">黃文彬</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 491,076,770</span>
+                </a>
+                                <a href="/persons/3872.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">8</span>
+                    <div class="flex-1">
+                        <span class="font-medium">鄭聚然</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 328,615,633</span>
+                </a>
+                                <a href="/persons/44.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
+                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">9</span>
+                    <div class="flex-1">
+                        <span class="font-medium">羅淑蕾</span>
+                    </div>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 279,554,665</span>
+                </a>
+                                <a href="/persons/32.html" class="flex items-center px-6 py-3 hover:bg-brand-50 transition">
                     <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm mr-3">10</span>
                     <div class="flex-1">
-                        <span class="font-medium">鄭麗君</span>
+                        <span class="font-medium">鄭汝芬</span>
                     </div>
-                    <span class="text-sm text-gray-500 stat-number">NT$ 1,181,230,000</span>
+                    <span class="text-sm text-gray-500 stat-number">NT$ 257,735,429</span>
                 </a>
                             </div>
         </div>
